@@ -1,5 +1,111 @@
-/*
-! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}/*
+! tailwindcss v3.4.14 | MIT License | https://tailwindcss.com
 *//*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -34,7 +140,8 @@ html,
   line-height: 1.5; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -moz-tab-size: 4; /* 3 */
-  tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
   font-feature-settings: normal; /* 5 */
   font-variation-settings: normal; /* 6 */
@@ -68,7 +175,8 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 */
 
 abbr:where([title]) {
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /*
@@ -332,6 +440,11 @@ textarea {
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1; /* 1 */
+  color: #9ca3af; /* 2 */
+}
+
 input::placeholder,
 textarea::placeholder {
   opacity: 1; /* 1 */
@@ -383,12 +496,14 @@ video {
 }
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
-[hidden] {
+[hidden]:where(:not([hidden="until-found"])) {
   display: none;
 }
 
 [type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-color: #fff;
   border-color: #6b7280;
   border-width: 1px;
@@ -413,6 +528,11 @@ video {
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   border-color: #2563eb;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #6b7280;
+  opacity: 1;
 }
 
 input::placeholder,textarea::placeholder {
@@ -444,7 +564,8 @@ select {
   background-repeat: no-repeat;
   background-size: 1.5em 1.5em;
   padding-right: 2.5rem;
-  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
 }
 
 [multiple],[size]:where(select:not([size="1"])) {
@@ -453,17 +574,23 @@ select {
   background-repeat: unset;
   background-size: initial;
   padding-right: 0.75rem;
-  print-color-adjust: unset;
+  -webkit-print-color-adjust: unset;
+          print-color-adjust: unset;
 }
 
 [type='checkbox'],[type='radio'] {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   padding: 0;
-  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
   display: inline-block;
   vertical-align: middle;
   background-origin: border-box;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   flex-shrink: 0;
   height: 1rem;
   width: 1rem;
@@ -509,7 +636,9 @@ select {
 @media (forced-colors: active)  {
 
   [type='checkbox']:checked {
-    appearance: auto;
+    -webkit-appearance: auto;
+       -moz-appearance: auto;
+            appearance: auto;
   }
 }
 
@@ -520,7 +649,9 @@ select {
 @media (forced-colors: active)  {
 
   [type='radio']:checked {
-    appearance: auto;
+    -webkit-appearance: auto;
+       -moz-appearance: auto;
+            appearance: auto;
   }
 }
 
@@ -541,7 +672,9 @@ select {
 @media (forced-colors: active)  {
 
   [type='checkbox']:indeterminate {
-    appearance: auto;
+    -webkit-appearance: auto;
+       -moz-appearance: auto;
+            appearance: auto;
   }
 }
 
@@ -577,6 +710,7 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   font-family: Poppins, sans-serif;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.625;
   --tw-text-opacity: 1;
@@ -666,114 +800,6 @@ select {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
 }
-
-*, ::before, ::after {
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-gradient-from-position:  ;
-  --tw-gradient-via-position:  ;
-  --tw-gradient-to-position:  ;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-  --tw-contain-size:  ;
-  --tw-contain-layout:  ;
-  --tw-contain-paint:  ;
-  --tw-contain-style:  ;
-}
-
-::backdrop {
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-gradient-from-position:  ;
-  --tw-gradient-via-position:  ;
-  --tw-gradient-to-position:  ;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-  --tw-contain-size:  ;
-  --tw-contain-layout:  ;
-  --tw-contain-paint:  ;
-  --tw-contain-style:  ;
-}
 .container {
   width: 100%;
   margin-right: auto;
@@ -812,7 +838,9 @@ select {
   }
 }
 .form-input,.form-textarea,.form-select,.form-multiselect {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-color: #fff;
   border-color: #6b7280;
   border-width: 1px;
@@ -836,6 +864,10 @@ select {
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   border-color: #2563eb;
+}
+.form-input::-moz-placeholder, .form-textarea::-moz-placeholder {
+  color: #6b7280;
+  opacity: 1;
 }
 .form-input::placeholder,.form-textarea::placeholder {
   color: #6b7280;
@@ -938,6 +970,10 @@ main {
   --tw-text-opacity: 1;
   color: rgb(0 31 63 / var(--tw-text-opacity));
   border-radius: 6px;
+}
+.form-input::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(0 31 63 / var(--tw-text-opacity));
 }
 .form-input::placeholder {
   --tw-text-opacity: 1;
@@ -1274,7 +1310,6 @@ main {
 .content :where(table):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
   width: 100%;
   table-layout: auto;
-  text-align: start;
   margin-top: 2em;
   margin-bottom: 2em;
   font-size: 0.875em;
@@ -1308,6 +1343,9 @@ main {
 }
 .content :where(tfoot td):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
   vertical-align: top;
+}
+.content :where(th, td):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  text-align: start;
 }
 .content :where(figure > *):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
   margin-top: 0;
@@ -1377,16 +1415,16 @@ main {
   margin-top: 0.75em;
   margin-bottom: 0.75em;
 }
-.content :where(.prose > ul > li > *:first-child):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+.content :where(.prose > ul > li > p:first-child):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
   margin-top: 1.25em;
 }
-.content :where(.prose > ul > li > *:last-child):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+.content :where(.prose > ul > li > p:last-child):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
   margin-bottom: 1.25em;
 }
-.content :where(.prose > ol > li > *:first-child):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+.content :where(.prose > ol > li > p:first-child):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
   margin-top: 1.25em;
 }
-.content :where(.prose > ol > li > *:last-child):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+.content :where(.prose > ol > li > p:last-child):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
   margin-bottom: 1.25em;
 }
 .content :where(ul ul, ul ol, ol ul, ol ol):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
@@ -1720,7 +1758,9 @@ input#nav-toggle:checked ~ #nav-menu {
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(0 31 63 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1759,7 +1799,9 @@ input#nav-toggle:checked ~ #nav-menu {
   padding-bottom: 0.5rem;
   font-weight: 600;
   text-transform: capitalize;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   border-radius: 6px;
@@ -1843,9 +1885,6 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 .top-0 {
   top: 0px;
-}
-.top-1 {
-  top: 0.25rem;
 }
 .top-1\.5 {
   top: 0.375rem;
@@ -2112,7 +2151,9 @@ input#nav-toggle:checked ~ #nav-menu {
   text-align: center;
   padding: 32px 0;
   cursor: text;
-  user-select: none; }
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none; }
 
 .search-result mark {
   padding: 0;
@@ -2159,10 +2200,12 @@ input#nav-toggle:checked ~ #nav-menu {
   border-radius: 4px;
   max-height: 400px;
   width: 100%;
-  object-fit: cover; }
+  -o-object-fit: cover;
+     object-fit: cover; }
 
 .search-page .search-result-item > div > img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   max-height: 250px;
   width: 100%; }
 
@@ -2244,7 +2287,9 @@ input#nav-toggle:checked ~ #nav-menu {
   color: #999;
   font-size: 12px;
   padding: 8px 14px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   line-height: 1;
   display: flex;
   align-items: center; }
@@ -2338,7 +2383,8 @@ input#nav-toggle:checked ~ #nav-menu {
 .search-modal .search-result-item-image img {
   width: 100px;
   height: 100px;
-  object-fit: cover; }
+  -o-object-fit: cover;
+     object-fit: cover; }
 
 @media (max-width: 576px) {
   .search-modal .search-result-item-image img {
@@ -2500,11 +2546,6 @@ input#nav-toggle:checked ~ #nav-menu {
     height: 100%;
     margin: auto; }
 
-.share-twitter {
-  background-color: #000000; }
-  .share-twitter:hover {
-    background-color: #0c0c0c; }
-
 .share-pinterest {
   background-color: #bd081c; }
   .share-pinterest:hover {
@@ -2525,60 +2566,25 @@ input#nav-toggle:checked ~ #nav-menu {
   .share-reddit:hover {
     background-color: #3a80c1; }
 
-.share-google {
-  background-color: #dd4b39; }
-  .share-google:hover {
-    background-color: #c23321; }
-
 .share-linkedin {
   background-color: #0077b5; }
   .share-linkedin:hover {
     background-color: #046293; }
-
-.share-email {
-  background-color: #777; }
-  .share-email:hover {
-    background-color: #5e5e5e; }
-
-.share-whatsapp {
-  background-color: #25d366; }
-  .share-whatsapp:hover {
-    background-color: #1da851; }
-
-.share-hackernews {
-  background-color: #ff6600; }
-  .share-hackernews:hover {
-    background-color: #fb6200; }
 
 .share-vk {
   background-color: #507299; }
   .share-vk:hover {
     background-color: #43648c; }
 
-.share-facebook {
-  background-color: #3b5998; }
-  .share-facebook:hover {
-    background-color: #2d4373; }
-
 .share-twitter {
   background-color: #55acee; }
   .share-twitter:hover {
     background-color: #2795e9; }
 
-.share-google {
-  background-color: #dd4b39; }
-  .share-google:hover {
-    background-color: #c23321; }
-
 .share-email {
   background-color: #777777; }
   .share-email:hover {
     background-color: #5e5e5e; }
-
-.share-reddit {
-  background-color: #5f99cf; }
-  .share-reddit:hover {
-    background-color: #3a80c1; }
 
 .share-whatsapp {
   background-color: #25d366; }
@@ -2610,7 +2616,9 @@ input#nav-toggle:checked ~ #nav-menu {
   max-width: calc(100% - 20px); }
 
 .gallery .gallery-item img {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   width: 100%;
   vertical-align: middle;
   transition: 0.3s; }
@@ -2653,16 +2661,16 @@ input#nav-toggle:checked ~ #nav-menu {
   max-width: 100%;
   height: auto; }
 
-.logo-light {
+.img-light {
   display: initial; }
 
-.logo-dark {
+.img-dark {
   display: none; }
 
-.dark .logo-light {
+.dark .img-light {
   display: none; }
 
-.dark .logo-dark {
+.dark .img-dark {
   display: initial; }
 
 .content img {
@@ -2806,7 +2814,8 @@ input#nav-toggle:checked ~ #nav-menu {
   transform: rotate(0deg); }
 
 .accordion.active .accordion-content {
-  max-height: 100vh; }
+  max-height: -moz-max-content;
+  max-height: max-content; }
 
 .modal {
   position: fixed;

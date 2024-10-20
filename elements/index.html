@@ -1,7 +1,7 @@
 <!doctype html>
 <html
   itemscope
-  class="light"
+  class=""
   lang="en-us"
   itemtype="http://schema.org/WebPage">
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
@@ -25,16 +25,6 @@
 
 
 
-
-
-
-
-
-<link rel="shortcut icon" href="/images/favicon_hu4153017979914080783.png" type="image/x-icon">
-<link rel="icon" href="/images/favicon_hu4153017979914080783.png" type="image/x-icon">
-<link rel="icon" type="image/png" sizes="48x48" href="/images/favicon_hu13173901161898998938.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon_hu4153017979914080783.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/images/favicon_hu11606248942829075818.png">
 
 
 
@@ -142,42 +132,6 @@
 
   
   
-    
-    
-      
-    
-
-    
-
-
-    
-    
-
-
-    
-    
-      
-      
-      
-        <meta property="og:image" content="//localhost:1313/images/og-image.png" />
-        <meta name="twitter:image" content="//localhost:1313/images/og-image.png" />
-        <meta
-          name="twitter:card"
-          content="summary_large_image" />
-      
-      
-      <meta property="og:image:width" content="900" />
-      <meta property="og:image:height" content="600" />
-    
-
-
-    
-    <meta
-      property="og:image:type"
-      content="image/
-        .png
-      " />
-  
 
 
   
@@ -196,6 +150,10 @@
 <meta name="twitter:description" content="This is meta description" />
 
 
+  <meta name="twitter:site" content="@zeon_studio" />
+
+
+  <meta name="twitter:creator" content="@zeon.studio" />
 
 
 
@@ -241,6 +199,12 @@
 
 
 
+  <script type="module">
+    import mermaid from "https:\/\/cdn.jsdelivr.net\/npm\/mermaid@latest\/dist\/mermaid.esm.min.mjs";
+  </script>
+
+
+
     
     
 <meta http-equiv="x-dns-prefetch-control" content="on" />
@@ -266,7 +230,7 @@
 <script>
   (function () {
     const googleFont = document.createElement("link");
-    googleFont.href = "https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@500;700&display=swap";
+    googleFont.href = "https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Signika:wght@500;700&display=swap";
     googleFont.type = "text/css";
     googleFont.rel = "stylesheet";
     document.head.appendChild(googleFont);
@@ -336,6 +300,7 @@
   integrity=""
   media="print"
   onload="this.media='all'; this.onload=null;" />
+
 
   </head>
 
@@ -476,20 +441,6 @@
     
       
       
-
-
-      
-      
-        
-        
-        
-        
-
-        
-        
-        
-      
-      
     
   
   
@@ -498,22 +449,12 @@
     <img
       fetchpriority="high"
       decoding="async"
-      class="img logo-light"
+      class="img"
       width="160"
       height="32"
       src="/images/logo_hu16283802343828116146.webp"
-      alt="Fusco"
-      onerror="this.onerror=null;this.src='\/images\/logo_hu334267088753529309.png';" />
-
-    <img
-      fetchpriority="high"
-      decoding="async"
-      class="img logo-dark"
-      width="160"
-      height="32"
-      src="/images/logo-darkmode_hu8742296558546396051.webp"
-      alt="Fusco"
-      onerror="this.onerror=null;this.src='\/images\/logo-darkmode_hu4471933895487503573.png';" />
+      alt="Hugoplate"
+      onerror="this.onerror=null;this.src='\/images\/logo_hu334267088753529309.png'" />
   
   
 
@@ -566,51 +507,118 @@
             <a
               class="nav-link "
               
-              href="/services/"
-              >Services</a
-            >
-          </li>
-        
-      
-        
-        
-        
-        
-          <li class="nav-item">
-            <a
-              class="nav-link "
-              
-              href="/newsletter/"
-              >Newsletter</a
-            >
-          </li>
-        
-      
-        
-        
-        
-        
-          <li class="nav-item">
-            <a
-              class="nav-link "
-              
-              href="/contact/"
-              >Contact</a
-            >
-          </li>
-        
-      
-        
-        
-        
-        
-          <li class="nav-item">
-            <a
-              class="nav-link "
-              
-              href="/about/"
+              href="/about"
               >About</a
             >
+          </li>
+        
+      
+        
+        
+        
+        
+          <li class="nav-item">
+            <a
+              class="nav-link "
+              
+              href="/elements"
+              >Elements</a
+            >
+          </li>
+        
+      
+        
+        
+        
+        
+          <li class="nav-item nav-dropdown group relative">
+            <span
+              class="nav-link 
+                
+                
+                
+              
+                
+                
+                
+              
+                
+                
+                
+              
+                
+                
+                
+              
+                
+                
+                
+               inline-flex items-center">
+              Pages
+              <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+                <path
+                  d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+              </svg>
+            </span>
+            <ul
+              class="nav-dropdown-list lg:group-hover:visible lg:group-hover:opacity-100">
+              
+                
+                
+                <li class="nav-dropdown-item">
+                  <a
+                    class="nav-dropdown-link "
+                    
+                    href="/404">
+                    404 Page
+                  </a>
+                </li>
+              
+                
+                
+                <li class="nav-dropdown-item">
+                  <a
+                    class="nav-dropdown-link "
+                    
+                    href="/authors">
+                    Authors
+                  </a>
+                </li>
+              
+                
+                
+                <li class="nav-dropdown-item">
+                  <a
+                    class="nav-dropdown-link "
+                    
+                    href="/blog">
+                    Blog
+                  </a>
+                </li>
+              
+                
+                
+                <li class="nav-dropdown-item">
+                  <a
+                    class="nav-dropdown-link "
+                    
+                    href="/categories">
+                    Categories
+                  </a>
+                </li>
+              
+                
+                
+                <li class="nav-dropdown-item">
+                  <a
+                    class="nav-dropdown-link "
+                    
+                    href="/contact">
+                    Contact
+                  </a>
+                </li>
+              
+            </ul>
           </li>
         
       
@@ -619,7 +627,7 @@
           <a
             class="btn btn-outline-primary btn-sm"
             href="/contact">
-            Get in Touch! ✉️
+            get a quote
           </a>
         </li>
       
@@ -652,6 +660,73 @@
       
 
 
+  <div class="theme-switcher mr-5 hidden">
+    <input id="theme-switcher" data-theme-switcher type="checkbox" />
+    <label for="theme-switcher">
+      <span class="sr-only">theme switcher</span>
+      <span>
+        
+        <svg
+          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 opacity-100 dark:opacity-0"
+          viewBox="0 0 56 56"
+          fill="#fff"
+          height="16"
+          width="16">
+          <path
+            d="M30 4.6c0-1-.9-2-2-2a2 2 0 0 0-2 2v5c0 1 .9 2 2 2s2-1 2-2Zm9.6 9a2 2 0 0 0 0 2.8c.8.8 2 .8 2.9 0L46 13a2 2 0 0 0 0-2.9 2 2 0 0 0-3 0Zm-26 2.8c.7.8 2 .8 2.8 0 .8-.7.8-2 0-2.9L13 10c-.7-.7-2-.8-2.9 0-.7.8-.7 2.1 0 3ZM28 16a12 12 0 0 0-12 12 12 12 0 0 0 12 12 12 12 0 0 0 12-12 12 12 0 0 0-12-12Zm23.3 14c1.1 0 2-.9 2-2s-.9-2-2-2h-4.9a2 2 0 0 0-2 2c0 1.1 1 2 2 2ZM4.7 26a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4.9c1 0 2-.9 2-2s-1-2-2-2Zm37.8 13.6a2 2 0 0 0-3 0 2 2 0 0 0 0 2.9l3.6 3.5a2 2 0 0 0 2.9 0c.8-.8.8-2.1 0-3ZM10 43.1a2 2 0 0 0 0 2.9c.8.7 2.1.8 3 0l3.4-3.5c.8-.8.8-2.1 0-2.9-.8-.8-2-.8-2.9 0Zm20 3.4c0-1.1-.9-2-2-2a2 2 0 0 0-2 2v4.9c0 1 .9 2 2 2s2-1 2-2Z" />
+        </svg>
+        
+        <svg
+          class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 opacity-0 dark:opacity-100"
+          viewBox="0 0 24 24"
+          fill="none"
+          height="16"
+          width="16">
+          <path
+            fill="#000"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M8.2 2.2c1-.4 2 .6 1.6 1.5-1 3-.4 6.4 1.8 8.7a8.4 8.4 0 0 0 8.7 1.8c1-.3 2 .5 1.5 1.5v.1a10.3 10.3 0 0 1-9.4 6.2A10.3 10.3 0 0 1 3.2 6.7c1-2 2.9-3.5 4.9-4.4Z" />
+        </svg>
+      </span>
+    </label>
+  </div>
+
+  
+  <script>
+    var darkMode = false;
+
+    
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches){darkMode = true}
+    
+
+    if (localStorage.getItem("theme") === "dark"){darkMode = true}
+    else if (localStorage.getItem("theme") === "light"){darkMode = false}
+
+    if (darkMode){document.documentElement.classList.add("dark")}
+    else {document.documentElement.classList.remove("dark")}
+
+    
+    document.addEventListener("DOMContentLoaded", () => {
+      var themeSwitch = document.querySelectorAll("[data-theme-switcher]");
+      var themeSwitcherContainer = document.querySelector('.theme-switcher');
+
+      [].forEach.call(themeSwitch, function (ts) {
+        ts.checked = darkMode;
+        ts.addEventListener("click", () => {
+          document.documentElement.classList.toggle("dark");
+          localStorage.setItem(
+            "theme",
+            document.documentElement.classList.contains("dark") ? "dark" : "light"
+          );
+        });
+      });
+
+      
+      themeSwitcherContainer.classList.remove('hidden');
+    });
+  </script>
+
 
 
 
@@ -660,7 +735,7 @@
         <a
           href="/contact"
           class="btn btn-outline-primary btn-sm hidden lg:inline-block">
-          Get in Touch! ✉️
+          get a quote
         </a>
       
     </div>
@@ -716,7 +791,7 @@
             data-search-input
             autocomplete="off"
             aria-label="Search"
-            placeholder="Search Post ..." />
+            placeholder="Search Post..." />
         </div>
         <div class="search-wrapper-body">
           <div class="search-result" data-search-result></div>
@@ -939,8 +1014,7 @@
  
 
 
->I&rsquo;m an inline-style link</a>
-</p>
+>I&rsquo;m an inline-style link</a></p>
 <p><a href="https://www.google.com"
 
 
@@ -952,8 +1026,7 @@
  
 
 
->I&rsquo;m an inline-style link with title</a>
-</p>
+>I&rsquo;m an inline-style link with title</a></p>
 <p><a href="https://www.themefisher.com"
 
 
@@ -963,8 +1036,7 @@
  
 
 
->I&rsquo;m a reference-style link</a>
-</p>
+>I&rsquo;m a reference-style link</a></p>
 <p><a href="../blob/master/LICENSE"
 
 
@@ -972,8 +1044,7 @@
  
 
 
->I&rsquo;m a relative reference to a repository file</a>
-</p>
+>I&rsquo;m a relative reference to a repository file</a></p>
 <p><a href="https://gethugothemes.com"
 
 
@@ -983,8 +1054,7 @@
  
 
 
->You can use numbers for reference-style link definitions</a>
-</p>
+>You can use numbers for reference-style link definitions</a></p>
 <p>Or leave it empty and use the <a href="https://www.getjekyllthemes.com"
 
 
@@ -994,8 +1064,7 @@
  
 
 
->link text itself</a>
-.</p>
+>link text itself</a>.</p>
 <p>URLs and URLs in angle brackets will automatically get turned into links.
 <a href="http://www.example.com"
 
@@ -1006,8 +1075,7 @@
  
 
 
->http://www.example.com</a>
- or <a href="http://www.example.com"
+>http://www.example.com</a> or <a href="http://www.example.com"
 
 
 
@@ -1016,8 +1084,7 @@
  
 
 
->http://www.example.com</a>
- and sometimes
+>http://www.example.com</a> and sometimes
 example.com (but not on Github, for example).</p>
 <p>Some text to show that the reference links can follow later.</p>
 <hr>
@@ -1310,7 +1377,15 @@ example.com (but not on Github, for example).</p>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">s</span>);
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Python syntax highlighting&#34;</span>
 </span></span><span style="display:flex;"><span>print s
-</span></span></code></pre></div><hr>
+</span></span></code></pre></div><pre class="mermaid">
+    flowchart TD
+	    A[Start] --&gt; B{Is it?}
+	    B -- Yes --&gt; C[OK]
+	    C --&gt; D[Rethink]
+	    D --&gt; B
+	    B -- No ----&gt; E[End]
+</pre>
+<hr>
 <h3 id="blockquote">Blockquote</h3>
 <blockquote>
 <p>Did you come here for something in particular or just general Riker-bashing? And blowing into maximum warp speed, you appeared for an instant to be in two places at once.</p>
@@ -1320,24 +1395,24 @@ example.com (but not on Github, for example).</p>
 <table>
   <thead>
       <tr>
-          <th style="text-align: left">Tables</th>
+          <th>Tables</th>
           <th style="text-align: center">Are</th>
           <th style="text-align: right">Cool</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td style="text-align: left">col 3 is</td>
+          <td>col 3 is</td>
           <td style="text-align: center">right-aligned</td>
           <td style="text-align: right">$1600</td>
       </tr>
       <tr>
-          <td style="text-align: left">col 2 is</td>
+          <td>col 2 is</td>
           <td style="text-align: center">centered</td>
           <td style="text-align: right">$12</td>
       </tr>
       <tr>
-          <td style="text-align: left">zebra stripes</td>
+          <td>zebra stripes</td>
           <td style="text-align: center">are neat</td>
           <td style="text-align: right">$1</td>
       </tr>
@@ -1376,72 +1451,9 @@ example.com (but not on Github, for example).</p>
   
   
     
-    
-      
-    
-
-    
-
-
-    
-    
-
-
-    
-    
-    
-    
-      
-      
-    
-    
-    
-    
-
-
-    
-    
-      
-      
-
-      
-        
-        
-      
-
-
-      
-
-      
-      
-        
-        
-        
-      
-      
-      
-      
-
-    
-    
-
-    
-    
-      
-      
-          <img
-            title="image title"
-            loading="lazy"
-            decoding="async"
-            class="img img-fluid img-center"
-            width="1096"
-            height="480"
-            src="/images/image-placeholder_hu9204186235374062168.png"
-            alt="alter-text"
-            onerror="this.onerror='null';this.src='\/images\/image-placeholder_hu9204186235374062168.png'" />
-      
-    
-
+    <strong style="color:red; margin-bottom:15px; display:inline-block;"
+      >//localhost:1313/images/image-placeholder.png does not exist</strong
+    >
   
   
 
@@ -1480,538 +1492,12 @@ example.com (but not on Github, for example).</p>
 
 
 
-  
-  <div
-    class=" gallery 
-      zoomable
-    ">
-    
-      
-      
-      
-        
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-  
-  
-  
-
-
-  
-  
-    
-
-    
-    
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-
-    
-    
-    
-      
-      
-        
-        
-      
-      
-    
-
-
-    
-  
-
-
-  
-
-
-        
-        
-        
-        
-
-        <div class="gallery-item">
-          
-            <a
-              href="/images/gallery/01.jpg"
-              style="display: block;"
-              class="glightbox">
-              <img
-                loading="lazy"
-                src="/images/gallery/01_hu13625804415996976767.jpg"
-                class="img"
-                style="margin: 0;"
-                alt="01.jpg"
-                onerror="this.onerror='null';this.src='\/images\/gallery\/01_hu13625804415996976767.jpg'" />
-            </a>
-          
-        </div>
-      
-    
-      
-      
-      
-        
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-  
-  
-  
-
-
-  
-  
-    
-
-    
-    
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-
-    
-    
-    
-      
-      
-        
-        
-      
-      
-    
-
-
-    
-  
-
-
-  
-
-
-        
-        
-        
-        
-
-        <div class="gallery-item">
-          
-            <a
-              href="/images/gallery/02.jpg"
-              style="display: block;"
-              class="glightbox">
-              <img
-                loading="lazy"
-                src="/images/gallery/02_hu16280085375065092097.jpg"
-                class="img"
-                style="margin: 0;"
-                alt="02.jpg"
-                onerror="this.onerror='null';this.src='\/images\/gallery\/02_hu16280085375065092097.jpg'" />
-            </a>
-          
-        </div>
-      
-    
-      
-      
-      
-        
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-  
-  
-  
-
-
-  
-  
-    
-
-    
-    
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-
-    
-    
-    
-      
-      
-        
-        
-      
-      
-    
-
-
-    
-  
-
-
-  
-
-
-        
-        
-        
-        
-
-        <div class="gallery-item">
-          
-            <a
-              href="/images/gallery/03.jpg"
-              style="display: block;"
-              class="glightbox">
-              <img
-                loading="lazy"
-                src="/images/gallery/03_hu8670985741542890475.jpg"
-                class="img"
-                style="margin: 0;"
-                alt="03.jpg"
-                onerror="this.onerror='null';this.src='\/images\/gallery\/03_hu8670985741542890475.jpg'" />
-            </a>
-          
-        </div>
-      
-    
-      
-      
-      
-        
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-  
-  
-  
-
-
-  
-  
-    
-
-    
-    
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-
-    
-    
-    
-      
-      
-        
-        
-      
-      
-    
-
-
-    
-  
-
-
-  
-
-
-        
-        
-        
-        
-
-        <div class="gallery-item">
-          
-            <a
-              href="/images/gallery/04.jpg"
-              style="display: block;"
-              class="glightbox">
-              <img
-                loading="lazy"
-                src="/images/gallery/04_hu10141491179254175006.jpg"
-                class="img"
-                style="margin: 0;"
-                alt="04.jpg"
-                onerror="this.onerror='null';this.src='\/images\/gallery\/04_hu10141491179254175006.jpg'" />
-            </a>
-          
-        </div>
-      
-    
-      
-      
-      
-        
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-  
-  
-  
-
-
-  
-  
-    
-
-    
-    
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-
-    
-    
-    
-      
-      
-        
-        
-      
-      
-    
-
-
-    
-  
-
-
-  
-
-
-        
-        
-        
-        
-
-        <div class="gallery-item">
-          
-            <a
-              href="/images/gallery/05.jpg"
-              style="display: block;"
-              class="glightbox">
-              <img
-                loading="lazy"
-                src="/images/gallery/05_hu15924151827500731036.jpg"
-                class="img"
-                style="margin: 0;"
-                alt="05.jpg"
-                onerror="this.onerror='null';this.src='\/images\/gallery\/05_hu15924151827500731036.jpg'" />
-            </a>
-          
-        </div>
-      
-    
-      
-      
-      
-        
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-  
-  
-  
-
-
-  
-  
-    
-
-    
-    
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-
-    
-    
-    
-      
-      
-        
-        
-      
-      
-    
-
-
-    
-  
-
-
-  
-
-
-        
-        
-        
-        
-
-        <div class="gallery-item">
-          
-            <a
-              href="/images/gallery/06.jpg"
-              style="display: block;"
-              class="glightbox">
-              <img
-                loading="lazy"
-                src="/images/gallery/06_hu13625804415996976767.jpg"
-                class="img"
-                style="margin: 0;"
-                alt="06.jpg"
-                onerror="this.onerror='null';this.src='\/images\/gallery\/06_hu13625804415996976767.jpg'" />
-            </a>
-          
-        </div>
-      
-    
-    
-  </div>
-
-  
+  <strong style="display: inline-block; margin-top:15px">
+    Nothing to show in [//localhost:1313/<span style="color:red">
+      images/gallery
+    </span>
+    ] or folder does not exist
+  </strong>
 
 <hr>
 <h3 id="slider">Slider</h3>
@@ -2040,552 +1526,12 @@ example.com (but not on Github, for example).</p>
     
     
       
-      
-        
-        
-        
-
-          
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-  
-  
-  
-
-
-  
-  
-    
-
-    
-    
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-
-    
-    
-    
-      
-      
-        
-        
-      
-      
-    
-
-
-    
-  
-
-
-  
-
-
-          
-          
-          
-          
-
-
-          <div
-            class="swiper-slide zoomable">
-            
-              <a
-                href="/images/gallery/01.jpg"
-                class="glightbox"
-                style="display: block;">
-                <img
-                  loading="lazy"
-                  src="/images/gallery/01_hu13625804415996976767.jpg"
-                  class="img"
-                  style="margin: 0"
-                  alt="01.jpg"
-                  onerror="this.onerror='null';this.src='\/images\/gallery\/01_hu13625804415996976767.jpg'" />
-              </a>
-            
-          </div>
-        
-      
-        
-        
-        
-
-          
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-  
-  
-  
-
-
-  
-  
-    
-
-    
-    
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-
-    
-    
-    
-      
-      
-        
-        
-      
-      
-    
-
-
-    
-  
-
-
-  
-
-
-          
-          
-          
-          
-
-
-          <div
-            class="swiper-slide zoomable">
-            
-              <a
-                href="/images/gallery/02.jpg"
-                class="glightbox"
-                style="display: block;">
-                <img
-                  loading="lazy"
-                  src="/images/gallery/02_hu16280085375065092097.jpg"
-                  class="img"
-                  style="margin: 0"
-                  alt="02.jpg"
-                  onerror="this.onerror='null';this.src='\/images\/gallery\/02_hu16280085375065092097.jpg'" />
-              </a>
-            
-          </div>
-        
-      
-        
-        
-        
-
-          
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-  
-  
-  
-
-
-  
-  
-    
-
-    
-    
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-
-    
-    
-    
-      
-      
-        
-        
-      
-      
-    
-
-
-    
-  
-
-
-  
-
-
-          
-          
-          
-          
-
-
-          <div
-            class="swiper-slide zoomable">
-            
-              <a
-                href="/images/gallery/03.jpg"
-                class="glightbox"
-                style="display: block;">
-                <img
-                  loading="lazy"
-                  src="/images/gallery/03_hu8670985741542890475.jpg"
-                  class="img"
-                  style="margin: 0"
-                  alt="03.jpg"
-                  onerror="this.onerror='null';this.src='\/images\/gallery\/03_hu8670985741542890475.jpg'" />
-              </a>
-            
-          </div>
-        
-      
-        
-        
-        
-
-          
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-  
-  
-  
-
-
-  
-  
-    
-
-    
-    
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-
-    
-    
-    
-      
-      
-        
-        
-      
-      
-    
-
-
-    
-  
-
-
-  
-
-
-          
-          
-          
-          
-
-
-          <div
-            class="swiper-slide zoomable">
-            
-              <a
-                href="/images/gallery/04.jpg"
-                class="glightbox"
-                style="display: block;">
-                <img
-                  loading="lazy"
-                  src="/images/gallery/04_hu10141491179254175006.jpg"
-                  class="img"
-                  style="margin: 0"
-                  alt="04.jpg"
-                  onerror="this.onerror='null';this.src='\/images\/gallery\/04_hu10141491179254175006.jpg'" />
-              </a>
-            
-          </div>
-        
-      
-        
-        
-        
-
-          
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-  
-  
-  
-
-
-  
-  
-    
-
-    
-    
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-
-    
-    
-    
-      
-      
-        
-        
-      
-      
-    
-
-
-    
-  
-
-
-  
-
-
-          
-          
-          
-          
-
-
-          <div
-            class="swiper-slide zoomable">
-            
-              <a
-                href="/images/gallery/05.jpg"
-                class="glightbox"
-                style="display: block;">
-                <img
-                  loading="lazy"
-                  src="/images/gallery/05_hu15924151827500731036.jpg"
-                  class="img"
-                  style="margin: 0"
-                  alt="05.jpg"
-                  onerror="this.onerror='null';this.src='\/images\/gallery\/05_hu15924151827500731036.jpg'" />
-              </a>
-            
-          </div>
-        
-      
-        
-        
-        
-
-          
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-  
-  
-  
-
-
-  
-  
-    
-
-    
-    
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-
-    
-    
-    
-      
-      
-        
-        
-      
-      
-    
-
-
-    
-  
-
-
-  
-
-
-          
-          
-          
-          
-
-
-          <div
-            class="swiper-slide zoomable">
-            
-              <a
-                href="/images/gallery/06.jpg"
-                class="glightbox"
-                style="display: block;">
-                <img
-                  loading="lazy"
-                  src="/images/gallery/06_hu13625804415996976767.jpg"
-                  class="img"
-                  style="margin: 0"
-                  alt="06.jpg"
-                  onerror="this.onerror='null';this.src='\/images\/gallery\/06_hu13625804415996976767.jpg'" />
-              </a>
-            
-          </div>
-        
-      
-
-
-      
-
-      
+      <strong style="display: inline-block; margin-top:15px">
+        Nothing to show in [//localhost:1313/<span style="color:red">
+          images/gallery
+        </span>
+        ] or folder does not exist
+      </strong>
     
     
   </div>
@@ -2718,20 +1664,6 @@ example.com (but not on Github, for example).</p>
     
       
       
-
-
-      
-      
-        
-        
-        
-        
-
-        
-        
-        
-      
-      
     
   
   
@@ -2740,22 +1672,12 @@ example.com (but not on Github, for example).</p>
     <img
       fetchpriority="high"
       decoding="async"
-      class="img logo-light"
+      class="img"
       width="160"
       height="32"
       src="/images/logo_hu16283802343828116146.webp"
-      alt="Fusco"
-      onerror="this.onerror=null;this.src='\/images\/logo_hu334267088753529309.png';" />
-
-    <img
-      fetchpriority="high"
-      decoding="async"
-      class="img logo-dark"
-      width="160"
-      height="32"
-      src="/images/logo-darkmode_hu8742296558546396051.webp"
-      alt="Fusco"
-      onerror="this.onerror=null;this.src='\/images\/logo-darkmode_hu4471933895487503573.png';" />
+      alt="Hugoplate"
+      onerror="this.onerror=null;this.src='\/images\/logo_hu334267088753529309.png'" />
   
   
 
@@ -2769,9 +1691,9 @@ example.com (but not on Github, for example).</p>
               <a
                 
                 href="
-                  /contact/
+                  /about
                 "
-                >Contact</a
+                >About</a
               >
             </li>
           
@@ -2779,9 +1701,19 @@ example.com (but not on Github, for example).</p>
               <a
                 
                 href="
-                  /about/
+                  /elements
                 "
-                >About</a
+                >Elements</a
+              >
+            </li>
+          
+            <li class="m-3 inline-block">
+              <a
+                
+                href="
+                  /privacy-policy
+                "
+                >Privacy Policy</a
               >
             </li>
           
@@ -2793,20 +1725,40 @@ example.com (but not on Github, for example).</p>
             <li>
               <a
                 target="_blank"
-                aria-label="linkedin"
+                aria-label="facebook"
                 rel="nofollow noopener"
-                href="https://www.linkedin.com/in/francescofusco/">
-                <i class="fab fa-linkedin"></i>
+                href="https://www.facebook.com/">
+                <i class="fab fa-facebook"></i>
               </a>
             </li>
           
             <li>
               <a
                 target="_blank"
-                aria-label="substack"
+                aria-label="twitter"
                 rel="nofollow noopener"
-                href="https://mondaymuse.substack.com/">
-                <i class="fa-solid fa-link"></i>
+                href="https://twitter.com/">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+          
+            <li>
+              <a
+                target="_blank"
+                aria-label="github"
+                rel="nofollow noopener"
+                href="https://www.github.com/">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          
+            <li>
+              <a
+                target="_blank"
+                aria-label="linkedin"
+                rel="nofollow noopener"
+                href="https://www.linkedin.com/">
+                <i class="fab fa-linkedin"></i>
               </a>
             </li>
           
@@ -2827,7 +1779,6 @@ example.com (but not on Github, for example).</p>
 
 
 >Zeon Studio</a>
-, Customised by Fusco.
       </p>
     </div>
   </div>
